@@ -7,11 +7,12 @@ import './Header.css';
 function Header() {
     const location = useLocation(); // Lấy thông tin đường dẫn hiện tại
     const isHome = location.pathname === '/'; // Kiểm tra nếu đang ở trang Home
+    const isResources = location.pathname === '/resources'; // Kiểm tra nếu đang ở trang Home
     const { user, logout } = useContext(UserContext);
     const { totalItems } = useCart(); // Access totalItems from CartContext
 
     return (
-        <header className={`header ${isHome ? 'header-home' : 'header-default'}`}>
+        <header className={`header ${isHome ? 'header-home' : 'header-default' }`}>
             <div className="logo">
                 <img src="/assets/icon.jpg" alt="Icon" />
             </div>
